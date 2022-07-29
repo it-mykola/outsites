@@ -1,0 +1,149 @@
+.steps {
+  // .steps_numbers
+
+  &_numbers {
+    display: flex;
+    align-items: center;
+    // margin-right: 100px;
+    position: relative;
+    max-width: 650px;
+    margin-bottom: 60px;
+  }
+
+  // .steps__form
+
+  &__form {
+  }
+}
+
+
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  //   transform: translate(-50%);
+  height: 2px;
+  background: $lightgray;
+  z-index: -1;
+  // .progress__successs
+
+  &__success {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    background: $red;
+    transition: 1s all ease;
+  }
+}
+.step {
+  // .step__number
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid $lightgray;
+    margin-right: 100px;
+    flex-shrink: 0;
+    background: $white;
+
+    &.active__number {
+      background: $red;
+      border: transparent;
+      transition: 1s all ease;
+      path {
+        fill: $white;
+        transition: 1s all ease;
+      }
+    }
+  }
+
+  // .step__buttons
+
+  &__buttons {
+    margin-top: 80px;
+    gap: 20px;
+    display: flex;
+  }
+}
+.form {
+  // .form__step
+
+  &__step {
+    display: none;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    display: flex;
+    position: relative;
+    border: 1px solid $lightgray;
+
+    &.search__input {
+      margin-top: 40px;
+      max-width: 360px;
+    }
+  }
+
+  // .form__item
+
+  &__item {
+    margin-top: 40px;
+  }
+
+  // .form__item-title
+
+  &__item-title {
+    font-style: normal;
+    font-weight: 494;
+    font-size: 25px;
+    line-height: 28px;
+    color: $blue;
+  }
+}
+.button {
+}
+.prev {
+  // .prev_step
+
+  &_step {
+  }
+}
+.next {
+  // .next_step
+
+  &_step {
+  }
+}
+
+.input {
+  // .imput__img
+  padding: 20px 20px 20px 65px;
+  width: 100%;
+  outline: none;
+  font-style: normal;
+  font-weight: 375;
+  font-size: 18px;
+  line-height: 20px;
+  color: $gray;
+
+  &:focus {
+    outline: 1px solid $red;
+  }
+
+  &__img {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translate(0px, -50%);
+  }
+}
